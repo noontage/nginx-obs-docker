@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ssbc:
+    build: .
+    ports:
+      - 50001:80
+    volumes:
+      - ./volumes/ssbc/access_log:/var/log/nginx
+      - ./volumes/ssbc/hls:/usr/local/nginx/html
